@@ -1,11 +1,12 @@
 <?php
 enum ProductCategory: string {
-    case ELECTRONICS = 'Electronics';
-    case FURNITURE = 'Furniture';
-    case CLOTHING = 'Clothing';
-    case HOME = 'Home';
-    case TOYS = 'Toys';
-    case BOOKS = 'Books';
+    case LAPTOPS = 'Laptops';
+    case SMARTPHONES = 'Smartphones';
+    case ACCESSORIES = 'Accessories';
+    case SOFTWARE = 'Software';
+    case PERIPHERALS = 'Peripherals';
+    case GAMING = 'Gaming';
+    case NETWORKING = 'Networking';
 
     public static function isValidCategory(string $category): bool {
         return in_array($category, array_column(self::cases(), 'value'));
